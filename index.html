@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Evolution: Interactive 3D Timeline</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Main 3D Canvas Container -->
+        <div id="canvas-container">
+            <canvas id="three-canvas"></canvas>
+        </div>
+        
+        <!-- Space Environment Elements -->
+        <div class="stars"></div>
+        <div class="cosmic-glow"></div>
+        
+        <!-- UI Overlay -->
+        <div class="ui-overlay">
+            <!-- Title Header -->
+            <header class="app-header">
+                <h1 class="title-main">AI Evolution Timeline</h1>
+                <p class="subtitle">Interactive Journey Through Artificial Intelligence History</p>
+            </header>
+            
+            <!-- Instructions -->
+            <div class="instructions">
+                <p> Click and drag to rotate •  Mouse wheel to zoom •  Click faces to explore</p>
+            </div>
+            
+            <!-- Loading Screen -->
+            <div id="loading-screen" class="loading-screen">
+                <div class="loading-cube">
+                    <div class="cube-face"></div>
+                    <div class="cube-face"></div>
+                    <div class="cube-face"></div>
+                    <div class="cube-face"></div>
+                    <div class="cube-face"></div>
+                    <div class="cube-face"></div>
+                </div>
+                <p class="loading-text">Initializing Holographic Interface...</p>
+            </div>
+        </div>
+        
+        <!-- Information Panel (Glass UI) -->
+        <div id="info-panel" class="info-panel hidden">
+            <div class="panel-header">
+                <h2 id="panel-title">Era Title</h2>
+                <p id="panel-period">Time Period</p>
+                <button id="close-panel" class="close-btn">×</button>
+            </div>
+            <div class="panel-content">
+                <div class="panel-section">
+                    <h3>Overview</h3>
+                    <p id="panel-description">Era description...</p>
+                </div>
+                <div class="panel-section">
+                    <h3>Key Breakthroughs</h3>
+                    <ul id="panel-breakthroughs">
+                        <li>Breakthrough item...</li>
+                    </ul>
+                </div>
+                <div class="panel-section">
+                    <h3>Notable Figures</h3>
+                    <ul id="panel-figures">
+                        <li>Figure...</li>
+                    </ul>
+                </div>
+                <div class="panel-section">
+                    <h3>Technologies</h3>
+                    <div id="panel-technologies" class="tech-tags">
+                        <span class="tech-tag">Technology</span>
+                    </div>
+                </div>
+                <div class="panel-section">
+                    <h3>Impact</h3>
+                    <p id="panel-impact">Impact description...</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hover Tooltip -->
+        <div id="tooltip" class="tooltip hidden">
+            <span id="tooltip-text">Hover text</span>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
